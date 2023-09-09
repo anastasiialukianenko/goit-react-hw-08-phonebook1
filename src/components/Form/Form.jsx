@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FormLabel, UserFormWrap, ContactsForm } from "components/Emotion.styled";
 import { addContacts, selectContacts } from "redux/appReducer";
 import { InputGroup, Input, InputLeftElement, ButtonGroup, Button } from "@chakra-ui/react";
-import { EmailIcon } from "@chakra-ui/icons";
+import { PhoneIcon, SmallAddIcon } from "@chakra-ui/icons";
 
 export function Form() {
   const dispatch = useDispatch();
@@ -56,7 +56,7 @@ export function Form() {
           <FormLabel>Name:</FormLabel>
           <InputGroup>
           <InputLeftElement pointerEvents='none'>
-          <EmailIcon color='gray.300' />
+          <SmallAddIcon color='gray.300' />
           </InputLeftElement>
             <Input
           onChange={handleNameChange}
@@ -75,7 +75,7 @@ export function Form() {
           <FormLabel>Number:</FormLabel>
           <InputGroup>
           <InputLeftElement pointerEvents='none'>
-          <EmailIcon color='gray.300' />
+          <PhoneIcon color='gray.300' />
           </InputLeftElement>
             <Input
           onChange={handleNumberChange}
